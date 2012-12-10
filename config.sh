@@ -79,6 +79,11 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"wasabi")
+	echo DEVICE=$1 >> .tmp-config &&
+	repo_sync $1
+    ;;
+
 "pandaboard")
 	echo DEVICE=panda >> .tmp-config &&
 	repo_sync $1
@@ -106,6 +111,7 @@ case "$1" in
 	echo - nexus-s-4g
 	echo - otoro
 	echo - unagi
+	echo - wasabi
 	echo - pandaboard
 	echo - emulator
 	echo - emulator-x86
